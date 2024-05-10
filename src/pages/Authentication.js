@@ -1,6 +1,8 @@
 function Authentication() {
   return (
-    <div>Authentication</div>
+    <div className="homeContainer">
+      
+    </div>
   )
 }
 
