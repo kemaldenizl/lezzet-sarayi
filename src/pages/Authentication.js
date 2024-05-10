@@ -8,11 +8,11 @@ function Authentication() {
       <Link to="/"><img src={logo} alt="logo" className="homeLogo" /></Link>
       <form className="authForm">
         <div className="authFormGroup">
-          <label className="authFormLabel">Email / Telefon:</label>
+          <label className="authFormLabel">Email / Telefon :</label>
           <input className="authFormInput" type="email"/>
         </div>
         <div className="authFormGroup">
-          <label className="authFormLabel">Şifre:</label>
+          <label className="authFormLabel">Şifre :</label>
           <input className="authFormInput" type="password"/>
         </div>
         <input className="authFormInput authFormSubmit" type="submit" value="Giriş Yap"/>
