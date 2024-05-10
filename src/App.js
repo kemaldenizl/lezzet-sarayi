@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import Menu from "./pages/Menu";
 import Authentication from "./pages/Authentication";
+import Error from "./pages/Error";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/menu" element={<Menu/>}/>
       <Route path="/authentication" element={<Authentication/>}/>
+      <Route path="*" element={<Error/>}/>
     </Routes>
   );
 }

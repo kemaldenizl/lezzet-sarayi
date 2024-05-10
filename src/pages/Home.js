@@ -4,7 +4,7 @@ import logo from "../assets/logo.png"
 
 function Home() {
   return (    
-    <div className="homeContainer">
+    <div className="container homeContainer">
       <div className="homeContainerInside">
         <div><img src={logo} className="homeLogo" alt="logo" /></div>
         <div className="homeButton"><Link className="homeA" to="/menu">Sipariş Ver</Link></div>

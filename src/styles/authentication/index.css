@@ -43,6 +43,6 @@
 
 .authFormInput:focus{
     background-color: white;
-    transition: 1000ms;
+    transition: 750ms;
     outline: none;
 }
