@@ -12,3 +12,17 @@ html,body{
     height: 100%;
     width: 100%;
 }
+
+.mainImg{
+    background: url("../assets/home2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .mainImg{
+        background: url("../assets/home.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

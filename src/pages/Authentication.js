@@ -1,7 +1,9 @@
 import "../styles/authentication/index.css"
-import logo from "../assets/logo.png"
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import Logo from "../utilities/Logo"
+import { Col, Container, Row } from "react-bootstrap"
+import AuthForm from "../components/Authentication/AuthForm"
 
 function Authentication() {
 
@@ -19,21 +21,25 @@ function Authentication() {
     }
   }
 
+  const handleChange = (e,type) => {
+    if(type === "firstLogin"){
+      setFirstLogin(e.target.value)
+    }else if(type === "password"){
+      setPassword(e.target.value)
+    }
+  }
+  //(e) => setFirstLogin(e.target.value)
   return (
-    <div className="container authContainer">
-      <Link to="/"><img src={logo} alt="logo" className="homeLogo" /></Link>
-      <form onSubmit={handleSubmit} className="authForm">
-        <div className="authFormGroup">
-          <label className="authFormLabel">Email / Telefon :</label>
-          <input className="authFormInput" onChange={(e) => setFirstLogin(e.target.value)} value={firstLogin} type="text"/>
-        </div>
-        <div className="authFormGroup">
-          <label className="authFormLabel">Şifre :</label>
-          <input className="authFormInput" onChange={(e) => setPassword(e.target.value)} value={password} type="password"/>
-        </div>
-        <input className="authFormInput authFormSubmit" type="submit" value="Giriş Yap"/>
-      </form>
-    </div>
+    <Container fluid className="mainImg d-flex flex-column justify-content-center align-items-center h-100">
+      <Row className="justify-content-md-center">
+        <Col md="auto"><Link to="/"><Logo moreClass="fenerbahce"/></Link></Col>
+      </Row>
+      <Row className="justify-content-md-center">
+        <Col md="auto">
+          <AuthForm handleSubmit={handleSubmit} firstLogin={firstLogin} password={password} loginHandleChange={(e) => handleChange(e,"firstLogin")} passwordHandleChange={(e) => handleChange(e,"password")} />
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

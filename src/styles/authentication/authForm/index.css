@@ -1,0 +1,37 @@
+.authForm{
+    background-color: rgba(0, 0, 0, 0.788);
+    border-radius: 25px;
+    display: flex;
+    flex-direction:column ;
+    gap: 5px;
+    padding: 50px;
+}
+.authFormGroup{
+    display: flex;
+    flex-direction: column;
+}
+.authFormLabel{
+    color: #8f8e8edc;
+}
+.authFormInput{
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    background-color: #8f8e8e;
+    padding: 5%;
+}
+.authFormSubmit{
+    margin-top: 5%;
+}
+
+.authFormSubmit:hover{
+    background-color: white;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.authFormInput:focus{
+    background-color: white;
+    transition: 750ms;
+    outline: none;
+}
