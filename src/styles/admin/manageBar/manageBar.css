@@ -1,0 +1,34 @@
+.manageBarButton{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.manageBarContentListItem{
+
+}
+.manageBarContentListItem:hover{
+    cursor: pointer;
+}
+
+.adminLink{
+    text-decoration: none;
+}
+@media only screen and (min-width: 992px) {
+    .manageBarContentContainer{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        height: 100%;
+        width: 20%;
+    }
+    .manageBarContentList{
+        height: 100%;
+        background-color: white;
+        width: 100%;
+    }
+    .manageBarContentListItem{
+        
+    }
+}
