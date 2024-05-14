@@ -14,7 +14,7 @@ function Authentication() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if(firstLogin === "admin" || password === "admin"){
+    if(firstLogin === "admin" && password === "admin"){
       navigate("/admin");
     }else{
       navigate("/error");
