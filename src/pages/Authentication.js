@@ -28,7 +28,6 @@ function Authentication() {
       setPassword(e.target.value)
     }
   }
-  //(e) => setFirstLogin(e.target.value)
   return (
     <Container fluid className="mainImg d-flex flex-column justify-content-center align-items-center h-100">
       <Row className="justify-content-md-center">

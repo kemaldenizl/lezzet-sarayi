@@ -9,7 +9,7 @@ function CreateMenuContent() {
             <Col>Fiyat</Col>
             <Col>Gram</Col>
             <Col><Badge bg="danger">Kaldır</Badge></Col>
-            <Col><Badge bg="warning">Kaldır</Badge></Col>
+            <Col><Badge bg="warning">Düzenle</Badge></Col>
         </Row>
     </Container>
   )
