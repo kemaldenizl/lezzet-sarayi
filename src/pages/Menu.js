@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Logo from "../utilities/Logo"
-import { Container,Row,Col, Badge } from "react-bootstrap"
+import { Container,Row,Col } from "react-bootstrap"
 import MenuTable from "../components/Menu/MenuTable"
 
 function Menu() {

@@ -1,8 +1,6 @@
 function ManageOrder() {
   return (
-    <div>
-        Manage Order
-    </div>
+    <div>Manage Order</div>        
   )
 }
 
