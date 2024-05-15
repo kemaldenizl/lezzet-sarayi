@@ -8,7 +8,11 @@ import QRAdminPage from "./pages/admin/pages/QRAdminPage";
 import User from "./pages/admin/pages/User";
 import Graph from "./pages/admin/pages/Graph";
 import CreateMenu from "./pages/admin/pages/CreateMenu";
-
+import StaffLayout from "./pages/staff/StaffLayout";
+import ManageOrder from "./pages/staff/pages/ManageOrder";
+import Profile from "./pages/staff/pages/Profile"
+import ManageStream from "./pages/staff/pages/ManageStream"
+import ManageUsers from "./pages/admin/pages/ManageUsers";
 
 function App() {
   return (
@@ -17,8 +21,16 @@ function App() {
       <Route path="/admin" element={<AdminLayout/>}>
         <Route index={true} element={<QRAdminPage/>}/>
         <Route path="graphics" element={<Graph/>}/>
-        <Route path="usermanage" element={<User/>}/>
+        <Route path="manageOrders" element={<ManageOrder/>}/>
         <Route path="createMenu" element={<CreateMenu/>} />
+        <Route path="profile" element={<Profile />}/>
+        <Route path="manageUser" element={<ManageUsers />}/>
+        <Route path="manageStream" element = {<ManageStream />} />
+      </Route>
+      <Route path="/staff" element={<StaffLayout/>}>
+        <Route index={true} element={<ManageOrder />}/>
+        <Route path="profile" element={<Profile />}/>
+        <Route path="manageStream" element = {<ManageStream />} />
       </Route>
       <Route path="/menu" element={<Menu/>}/>
       <Route path="/authentication" element={<Authentication/>}/>

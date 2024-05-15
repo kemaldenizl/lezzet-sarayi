@@ -1,28 +1,46 @@
 import {ListGroup} from 'react-bootstrap';
 import "../../../../styles/admin/manageBar/manageBar.css"
+import ManageBarContentItem from './ManageBarContentItem';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 
-function ManageBarContent() {
+function ManageBarContent({admin}) {
 
   const [isClicked, setIsClicked] = useState(1)
 
   return (
     <>
-    <ListGroup className='manageBarContentList' as="ul">
-      <Link className='adminLink' to="/admin"><ListGroup.Item active={isClicked === 1} onClick={() => setIsClicked(1)} className="manageBarContentListItem" as="li">QR Hazırla</ListGroup.Item></Link>
+      {
+        admin && (
+            <ListGroup className='manageBarContentList' as="ul">
+              <ManageBarContentItem number={1} content="QR Hazırla" path='/admin' isClicked={isClicked} handleClick={() => setIsClicked(1)} />
       
-      <Link className='adminLink' to="createMenu"><ListGroup.Item active={isClicked === 2} onClick={() => setIsClicked(2)} className="manageBarContentListItem"  as="li">Menü Oluştur</ListGroup.Item></Link>
+              <ManageBarContentItem number={2} content="Menü Oluştur" path='createMenu' isClicked={isClicked} handleClick={() => setIsClicked(2)} />
+    
+              <ManageBarContentItem number={3} content="Sipariş Görüntüle" path='manageOrders' isClicked={isClicked} handleClick={() => setIsClicked(3)} />
+    
+              <ManageBarContentItem number={4} content="Grafik Görüntüle" path='graphics' isClicked={isClicked} handleClick={() => setIsClicked(4)} />
+    
+              <ManageBarContentItem number={5} content="Personel Görüntüle / Oluştur" path='manageUser' isClicked={isClicked} handleClick={() => setIsClicked(5)} />
+    
+              <ManageBarContentItem number={6} content="Profil" path='profile' isClicked={isClicked} handleClick={() => setIsClicked(6)} />
+            
+              <ManageBarContentItem number={7} content="Yayını yönet" path='manageStream' isClicked={isClicked} handleClick={() => setIsClicked(7)} />
+            </ListGroup>
+          )
+        }
 
-      <Link className='adminLink' to="404"><ListGroup.Item active={isClicked === 3} onClick={() => setIsClicked(3)} className="manageBarContentListItem"  as="li">Sipariş Görüntüle</ListGroup.Item></Link>
- 
-      <Link className='adminLink' to="graphics"><ListGroup.Item active={isClicked === 4} onClick={() => setIsClicked(4)} className="manageBarContentListItem"  as="li">Grafik Görüntüle</ListGroup.Item></Link>
-
-      <Link className='adminLink' to="usermanage"><ListGroup.Item active={isClicked === 5} onClick={() => setIsClicked(5)} className="manageBarContentListItem"  as="li">Personel Görüntüle / Oluştur</ListGroup.Item></Link>
-
-      <Link className='adminLink' to="404"><ListGroup.Item active={isClicked === 6} onClick={() => setIsClicked(6)} className="manageBarContentListItem"  as="li">Profil</ListGroup.Item></Link>
-    </ListGroup>
+        {
+          !admin && (
+            <ListGroup className='manageBarContentList' as="ul">
+              <ManageBarContentItem number={1} content="Siparişleri Yönet" path='/staff' isClicked={isClicked} handleClick={() => setIsClicked(1)} />
+      
+              <ManageBarContentItem number={8} content="Profil" path='profile' isClicked={isClicked} handleClick={() => setIsClicked(8)} />
+    
+              <ManageBarContentItem number={10} content="Yayını yönet" path='manageStream' isClicked={isClicked} handleClick={() => setIsClicked(10)} />
+            </ListGroup>
+          )
+        }
     </>
   )
 }

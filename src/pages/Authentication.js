@@ -16,6 +16,8 @@ function Authentication() {
     e.preventDefault();
     if(firstLogin === "admin" && password === "admin"){
       navigate("/admin");
+    }else if(firstLogin ==="staff" && password === "staff"){
+      navigate("/staff")
     }else{
       navigate("/error");
     }

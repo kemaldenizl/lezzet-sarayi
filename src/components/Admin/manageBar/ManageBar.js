@@ -4,7 +4,7 @@ import { BsList } from "react-icons/bs";
 import "../../../styles/admin/manageBar/manageBar.css"
 import ManageBarContent from "./manageBarContent/ManageBarContent";
 
-function ManageBar() {
+function ManageBar({admin = true}) {
 
     const [show, setShow] = useState(false);
 
@@ -21,7 +21,7 @@ function ManageBar() {
                     <Offcanvas.Title>Yönetici Paneli</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="manageBarContentContainer">
-                    <ManageBarContent/>
+                    <ManageBarContent admin ={admin} />
                 </Offcanvas.Body>
             </Offcanvas>
         </>
