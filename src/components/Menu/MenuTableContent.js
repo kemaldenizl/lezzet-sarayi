@@ -27,8 +27,7 @@ function MenuTableContent({image,content, price, amount, description, currency ,
                 {add ? amount : itemAmount}
             </td>
 
-            {add && <td className="d-grid gap-2"><Button onClick={handleShow}>Sepete Ekle</Button></td>}
-              
+            {add && <td className="d-grid gap-2"><Button variant="primary" onClick={handleShow}>Sepete Ekle</Button></td>}
         </tr>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>

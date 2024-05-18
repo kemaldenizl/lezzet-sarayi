@@ -1,17 +1,31 @@
 import React from 'react'
-import { Badge, Col, Container, Row } from 'react-bootstrap'
+import {Table } from 'react-bootstrap'
+import CreateMenuTable from './CreateMenuTable'
+import hamburger from "../../../assets/hamburger.jpg"
+
 
 function CreateMenuContent() {
+
+  const currency = "₺"
+  const miktarBirim ="gr"
+
   return (
-    <Container fluid className="bg-white d-flex flex-column justify-content-center align-items-center ">
-        <Row>
-            <Col>İçerik</Col>
-            <Col>Fiyat</Col>
-            <Col>Gram</Col>
-            <Col><Badge bg="danger">Kaldır</Badge></Col>
-            <Col><Badge bg="warning">Düzenle</Badge></Col>
-        </Row>
-    </Container>
+    <Table responsive striped bordered>
+      <thead>
+        <tr>
+          <th>Görsel</th>
+          <th>Ürün</th>
+          <th>Fiyat</th>
+          <th>Ağırlık</th>
+          <th>Açıklama</th>
+          <th>Düzenle</th>
+          <th>Kaldır</th>
+        </tr>
+      </thead>
+      <tbody>
+        <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
+      </tbody>
+    </Table>
   )
 }
 

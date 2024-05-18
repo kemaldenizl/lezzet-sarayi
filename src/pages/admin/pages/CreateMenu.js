@@ -5,9 +5,9 @@ import CreateMenuForm from '../../../components/Admin/CreateMenu/CreateMenuForm'
 
 function CreateMenu() {
   return (
-    <Container className='d-flex flex-column justify-content-center align-items-center'>
-        <Row>
-            <Col>
+    <Container className='h-100 d-flex align-items-center w-100'>
+        <Row className='w-100'>
+            <Col sm={5}>
                 <Accordion>
                     <Accordion.Item eventKey="0">
                     <Accordion.Header>Ürün Ekle</Accordion.Header>
@@ -17,9 +17,9 @@ function CreateMenu() {
                     </Accordion.Item>
                 </Accordion>
             </Col>
-        </Row>
-        <Row className='my-3'>
-            <Col><CreateMenuContent/></Col>
+            <Col sm={7}>
+                <CreateMenuContent/>
+            </Col>
         </Row>
     </Container>
   )

@@ -15,7 +15,7 @@ function ManageBarContent({admin}) {
             <ListGroup className='manageBarContentList' as="ul">
               <ManageBarContentItem number={1} content="QR Hazırla" path='/admin' isClicked={isClicked} handleClick={() => setIsClicked(1)} />
       
-              <ManageBarContentItem number={2} content="Menü Oluştur" path='createMenu' isClicked={isClicked} handleClick={() => setIsClicked(2)} />
+              <ManageBarContentItem number={2} content="Menüyü Düzenle" path='createMenu' isClicked={isClicked} handleClick={() => setIsClicked(2)} />
     
               <ManageBarContentItem number={3} content="Sipariş Görüntüle" path='manageOrders' isClicked={isClicked} handleClick={() => setIsClicked(3)} />
     

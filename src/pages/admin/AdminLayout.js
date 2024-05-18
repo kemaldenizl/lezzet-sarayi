@@ -5,14 +5,14 @@ import ManageBar from "../../components/Admin/manageBar/ManageBar";
 function AdminLayout() {
 
   return (
-    <>
-      <Container fluid className="mainImg d-flex flex-column justify-content-center align-items-center h-100">
-        <Row>
-          <Col lg={4}><ManageBar /></Col>
-          <Col lg={8}><div className="adminContent"><Outlet /></div></Col>
+
+      <Container fluid className="mainImg h-100">
+        <Row className="h-100">
+          <Col sm={3}><ManageBar /></Col>
+          <Col sm={9} className="h-100"><Outlet /></Col>
         </Row>
       </Container>
-    </>
+
   )
 }
 
