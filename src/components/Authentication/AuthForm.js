@@ -20,7 +20,7 @@ function AuthForm({handleSubmit, firstLogin, password, loginHandleChange, passwo
   return (
     <form onSubmit={handleSubmit} className="authForm">
         <div className="authFormGroup">
-            <label className="authFormLabel">Email / Telefon :</label>
+            <label className="authFormLabel">Telefon Numarası :</label>
             <input className="authFormInput" onChange={loginHandleChange} value={firstLogin} type="text"/>
         </div>
         <div className="authFormGroup authFormGroupPassword">
