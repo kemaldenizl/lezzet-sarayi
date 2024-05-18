@@ -2,6 +2,9 @@ import React from 'react'
 import QRCode from 'react-qr-code';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import "../../../styles/admin/qrPage.css"
+import { MuiColorInput } from 'mui-color-input';
+
 
 function QRAdminPage() {
 
@@ -15,7 +18,7 @@ function QRAdminPage() {
   const [value, setValue] = useState(webUrl);
   const [back, setBack] = useState('#FFFFFF');
   const [fore, setFore] = useState('#000000');
-  const [size, setSize] = useState(256);
+  const [size, setSize] = useState(350);
   console.log(webUrl)
 
   const print = () => {
@@ -30,17 +33,31 @@ function QRAdminPage() {
   }
 
   return (
-    <div>         
-      <div>
-      <input type="text" onChange={(e) => setBack(e.target.value)} placeholder="Background of Qr-code" />
-      <br />   
-      <input type="text" onChange={(e) => setFore(e.target.value)} placeholder="Foreground of Qr-code" />
-      <br />              
-      <input type="number" onChange={(e) => setSize(parseInt(e.target.value === '' ? 0 : e.target.value, 10))} placeholder="Size of Qr-code" />
-      <br />          
-      <div id='qr'><QRCode title="test" value={value} bgColor={back} fgColor={fore} size={size} /></div>
+    <div className='qrScreen'>         
+      <div className='qrItems'>
+      <div className='qrMenu'>
+        <div className='qrInputs'>
+
+          <div className='qrColorPicker' >
+            <input class="form-control form-control-color" type="color" value={back} onChange={(e) => setBack(e.target.value)}/>             
+            <label>QR kodun arka plan rengini seçiniz</label>
+          </div>
+
+          <div className='qrColorPicker'>
+            <input class="form-control form-control-color" type="color" value={fore} onChange={(e) => setFore(e.target.value)} />
+            <label>QR kodun çizgi rengini seçiniz</label>
+          </div>
+
+          <div className='qrRange' >
+            <input type="range" className='form-control form-range' min={350} max={500} onChange={(e) => setSize(parseInt(e.target.value === '' ? 0 : e.target.value, 10))} />
+            <label>QR kodun boyutunu seçiniz</label> 
+          </div>
+
+        </div>
+        <div id='qr'><QRCode title="test" value={value} bgColor={back} fgColor={fore} size={size} /></div>
       </div>
-      <div><Button onClick={print}>Yazdır</Button></div>          
+      <div className="d-grid gap-2 qrButton"><Button variant="primary" size="lg" onClick={print}>Yazdır</Button></div>  
+      </div>          
     </div>
   )
 }

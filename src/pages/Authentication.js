@@ -33,7 +33,7 @@ function Authentication() {
   return (
     <Container fluid className="mainImg d-flex flex-column justify-content-center align-items-center h-100">
       <Row className="justify-content-md-center">
-        <Col md="auto"><Link to="/"><Logo moreClass="fenerbahce"/></Link></Col>
+        <Col md="auto"><Link to="/"><Logo /></Link></Col>
       </Row>
       <Row className="justify-content-md-center">
         <Col md="auto">
