@@ -28,14 +28,12 @@ function App() {
         <Route path="graphics" element={<Graph/>}/>
         <Route path="manageOrders" element={<ManageOrder/>}/>
         <Route path="createMenu" element={<CreateMenu/>} />
-        <Route path="profile" element={<Profile />}/>
         <Route path="manageUser" element={<ManageUsers />}/>
         <Route path="manageStream" element = {<ManageStream />} />
       </Route>
 
       <Route path="/staff" element={<StaffLayout/>}>
         <Route index={true} element={<ManageOrder />}/>
-        <Route path="profile" element={<Profile />}/>
         <Route path="manageStream" element = {<ManageStream />} />
       </Route>
 

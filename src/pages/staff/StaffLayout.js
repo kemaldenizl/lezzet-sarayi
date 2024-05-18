@@ -6,10 +6,10 @@ import { Outlet } from 'react-router-dom'
 function StaffLayout() {
   return (
     <>
-      <Container fluid className="mainImg d-flex flex-column justify-content-center align-items-center h-100">
-        <Row>
-          <Col md={4}><ManageBar admin={false} /></Col>
-          <Col md={8}><Outlet /></Col>
+      <Container fluid className="mainImg h-100">
+        <Row className="h-100">
+          <Col sm={3}><ManageBar admin={false} /></Col>
+          <Col sm={9} className="h-100"><Outlet /></Col>
         </Row>
       </Container>
     </>
