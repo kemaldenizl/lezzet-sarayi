@@ -2,6 +2,7 @@ import React from 'react'
 import { Accordion, Col, Container, Row } from 'react-bootstrap'
 import CreateMenuContent from '../../../components/Admin/CreateMenu/CreateMenuContent'
 import CreateMenuForm from '../../../components/Admin/CreateMenu/CreateMenuForm'
+import "../../../styles/admin/CreateMenu.css"
 
 function CreateMenu() {
   return (
@@ -17,7 +18,7 @@ function CreateMenu() {
                     </Accordion.Item>
                 </Accordion>
             </Col>
-            <Col sm={7}>
+            <Col className='table-container' sm={7}>
                 <CreateMenuContent/>
             </Col>
         </Row>

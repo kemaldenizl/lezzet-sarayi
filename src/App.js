@@ -16,6 +16,7 @@ import ManageUsers from "./pages/admin/pages/ManageUsers";
 import ManageStream from "./pages/staff/pages/ManageStream"
 
 import Error from "./pages/Error";
+import Live from "./pages/Live";
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
       </Route>
 
       <Route path="/menu" element={<Menu/>}/>
-
+      <Route path="/live" element={<Live/>}/>
       <Route path="/authentication" element={<Authentication/>}/>
 
       <Route path="*" element={<Error/>}/>

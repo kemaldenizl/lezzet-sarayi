@@ -15,7 +15,7 @@ function CreateMenuTable({image,content, price, amount, description}) {
     <>
         <tr>
             <td>
-                <img class="img-thumbnail" alt ="asd" src={image}></img>
+                <img width={50} class="img-thumbnail" alt ="asd" src={image}></img>
             </td>
             <td>
                 {content}

@@ -24,6 +24,11 @@ function CreateMenuContent() {
       </thead>
       <tbody>
         <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
+        <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
+        <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
+        <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
+        <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
+        <CreateMenuTable image={hamburger} content="asd" price={100} amount={150} description="asd" />
       </tbody>
     </Table>
   )

@@ -1,15 +1,21 @@
 import { Button, Form, ListGroup, Modal } from "react-bootstrap"
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function OrderNote() {
 
     const [show, setShow] = useState(false);
     const [message, setMessage] = useState("")
+    const navigate = useNavigate()
 
     const handleClose = () => setShow(false);
     const handleShow = (e) => {
         e.preventDefault()
         setShow(true);
+    }
+    const handleComplete = () =>{
+        handleClose()
+        navigate("/live")
     }
   return (
     <>
@@ -52,7 +58,7 @@ function OrderNote() {
         </Modal.Body>
         <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>İptal</Button>
-            <Button variant="primary" onClick={handleClose}>Siparişi Tamamla</Button>   
+            <Button variant="primary" onClick={handleComplete}>Siparişi Tamamla</Button>   
         </Modal.Footer>
       </Modal>
     </>
