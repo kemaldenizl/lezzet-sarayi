@@ -24,6 +24,8 @@ function ManageBarContent({admin}) {
               <ManageBarContentItem number={5} content="Personel Görüntüle / Oluştur" path='manageUser' isClicked={isClicked} handleClick={() => setIsClicked(5)} />
             
               <ManageBarContentItem number={7} content="Yayını yönet" path='manageStream' isClicked={isClicked} handleClick={() => setIsClicked(7)} />
+
+              <ManageBarContentItem number={8} content="Anasayfaya dön" path='/' isClicked={isClicked} handleClick={() => setIsClicked(8)} />
             </ListGroup>
           )
         }
@@ -34,6 +36,8 @@ function ManageBarContent({admin}) {
               <ManageBarContentItem number={1} content="Siparişleri Yönet" path='/staff' isClicked={isClicked} handleClick={() => setIsClicked(1)} />
     
               <ManageBarContentItem number={10} content="Yayını yönet" path='manageStream' isClicked={isClicked} handleClick={() => setIsClicked(10)} />
+
+              <ManageBarContentItem number={11} content="Anasayfaya dön" path='/' isClicked={isClicked} handleClick={() => setIsClicked(11)} />
             </ListGroup>
           )
         }
