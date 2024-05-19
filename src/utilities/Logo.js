@@ -1,8 +1,8 @@
 import logo from "../assets/logo.png"
 
-function Logo({height = "300px",width = "300px",logoStyleClass = ""}) {
+function Logo({size = "300px",logoStyleClass = ""}) {
   return (
-    <img src={logo} height={height} width={width} alt="logo" className={logoStyleClass ? "": " " | logoStyleClass} />
+    <img src={logo} height={size} width={size} alt="logo" className={logoStyleClass ? "": " " | logoStyleClass} />
   )
 }
 
