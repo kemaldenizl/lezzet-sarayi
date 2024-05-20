@@ -14,12 +14,12 @@ function Menu() {
         </Col>
       </Row>
       <Row className="justify-content-md-center">
-        <Col sm={5}>
+        <Col sm={6}>
           <MenuTable/>
         </Col>
       </Row>
-      <Row className="justify-content-md-center">
-        <Col sm={2}>
+      <Row className="justify-content-md-center gap-2">
+        <Col sm={3}>
           <Cart />
         </Col>
         <Col sm={3}> 

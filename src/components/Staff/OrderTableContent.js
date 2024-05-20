@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Badge, Button, ListGroup, Modal } from "react-bootstrap"
+import { useDispatch, useSelector } from "react-redux"
+import { saveOrderState } from '../../store/productSlice'
 
 function OrderTableContent({content, amount, customerMessage}) {
 
     const [show, setShow] = useState(false);
+    const dispatch = useDispatch();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -12,6 +15,10 @@ function OrderTableContent({content, amount, customerMessage}) {
         bg : "primary",
         message : "Sipariş Alındı"
     })
+
+    const handleSave = () => {
+        dispatch(saveOrderState([orderState.bg, orderState.message]))
+    }
 
   return (
     <>
@@ -33,13 +40,13 @@ function OrderTableContent({content, amount, customerMessage}) {
             </Modal.Header>
             <Modal.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "primary", message: "Sipariş Alındı"}); handleClose();}} variant="primary">Sipariş Alındı</Button></ListGroup.Item>
-                    <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "warning", message: "Hazırlanıyor"}); handleClose();}} variant="warning">Hazırlanıyor</Button></ListGroup.Item>
-                    <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "info", message: "Hazırlandı"}); handleClose();}} variant="info">Hazırlandı</Button></ListGroup.Item>
+                    <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "primary", message: "Sipariş Alındı"}); handleSave(); handleClose();}} variant="primary">Sipariş Alındı</Button></ListGroup.Item>
+                    <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "warning", message: "Hazırlanıyor"}); handleSave(); handleClose();}} variant="warning">Hazırlanıyor</Button></ListGroup.Item>
+                    <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "info", message: "Hazırlandı"}); handleSave(); handleClose();}} variant="info">Hazırlandı</Button></ListGroup.Item>
                     <ListGroup.Item>
                         <ListGroup className="list-group-flush">
-                            <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "success", message: "Teslim Edildi"}); handleClose();}} variant="success">Sipariş teslim edildi</Button></ListGroup.Item>
-                            <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "danger", message: "İptal Edildi"}); handleClose();}} variant="danger">Siparişi iptal et</Button></ListGroup.Item>
+                            <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "success", message: "Teslim Edildi"}); handleSave(); handleClose();}} variant="success">Sipariş teslim edildi</Button></ListGroup.Item>
+                            <ListGroup.Item className="d-flex flex-column"><Button onClick={() => {setOrderState({bg : "danger", message: "İptal Edildi"}); handleSave(); handleClose();}} variant="danger">Siparişi iptal et</Button></ListGroup.Item>
                         </ListGroup>
                     </ListGroup.Item>                 
                 </ListGroup>

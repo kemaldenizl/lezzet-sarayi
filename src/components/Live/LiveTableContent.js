@@ -1,7 +1,7 @@
-function LiveTableContent({product,amount,price}) {
+function LiveTableContent({id,product,amount,price}) {
   return (
     <>
-        <tr>
+        <tr key={id}>
             <td>{product}</td>
             <td>{amount}</td>
             <td>{price}</td>

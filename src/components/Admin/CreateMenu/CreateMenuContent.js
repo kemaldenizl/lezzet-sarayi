@@ -6,9 +6,6 @@ import hamburger from "../../../assets/hamburger.jpg"
 
 function CreateMenuContent() {
 
-  const currency = "₺"
-  const miktarBirim ="gr"
-
   return (
     <Table responsive striped bordered>
       <thead>

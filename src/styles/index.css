@@ -26,3 +26,9 @@ html,body{
         background-size: cover;
     }
 }
+.genelPrice{
+    height: 40px;
+}
+.totalPrice{
+    font-size: 1000;
+}

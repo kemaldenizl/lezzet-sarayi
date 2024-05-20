@@ -1,7 +1,11 @@
 import { Table } from "react-bootstrap"
 import LiveTableContent from "./LiveTableContent"
+import { useSelector } from "react-redux"
 
 function LiveTable() {
+
+    const cart = useSelector((state) => state.product.cart)
+
   return (
     <>
         <Table>
@@ -13,7 +17,9 @@ function LiveTable() {
                 </tr> 
             </thead>
             <tbody>
-                <LiveTableContent product={"hamburger"} price={200} amount={2}/>
+                {
+                    cart.map((value, index) => (<LiveTableContent key={index} id={index} product={value.product} price={value.productPrice} amount={value.productAmount} />)) 
+                }
             </tbody>
         </Table>
     </>

@@ -20,10 +20,10 @@ function MenuTable() {
       </thead>
       <tbody>
         <MenuTableContent image={hamburger} content="Hamburger" price={100} amount={`150${miktarBirim}`} currency={currency} description="açıklama" add />
-        <MenuTableContent content="Pizza" price={110} amount={`140${miktarBirim}`} currency={currency} description="açıklama" add />
-        <MenuTableContent content="İskender" price={90} amount={`145${miktarBirim}`} currency={currency} description="açıklama" add />
-        <MenuTableContent content="Makarna" price={70} amount={`130${miktarBirim}`} currency={currency} description="açıklama" add />
-        <MenuTableContent content="Kebap" price={100} amount={`125${miktarBirim}`} currency={currency} description="açıklama" add />
+        <MenuTableContent image={hamburger} content="Pizza" price={110} amount={`140${miktarBirim}`} currency={currency} description="açıklama" add />
+        <MenuTableContent image={hamburger} content="İskender" price={90} amount={`145${miktarBirim}`} currency={currency} description="açıklama" add />
+        <MenuTableContent image={hamburger} content="Makarna" price={70} amount={`130${miktarBirim}`} currency={currency} description="açıklama" add />
+        <MenuTableContent image={hamburger} content="Kebap" price={100} amount={`125${miktarBirim}`} currency={currency} description="açıklama" add />
       </tbody>
     </Table>
   )
